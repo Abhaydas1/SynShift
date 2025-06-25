@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">>
+    <title>Code Translator</title>
+</head>
+<body>
+    <h1>SynShift</h1>
+
+    <div class="container">
+        <label for="source_lang">Source Language:</label>
+        <select id="source_lang">
+            <option value="Python">Python</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="C#">C#</option>
+        </select>
+
+        <label for="target_lang">Target Language:</label>
+        <select id="target_lang">
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="C#">C#</option>
+            <option value="Python">Python</option>
+        </select>
+
+        <label for="input_code">Input Code:</label>
+        <textarea id="input_code" rows="10" placeholder="Enter your code here..."></textarea>
+
+        <button onclick="translateCode()">Translate</button>
+
+        <label for="output_code">Translated Code:</label>
+        <textarea id="output_code" rows="10" readonly></textarea>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
