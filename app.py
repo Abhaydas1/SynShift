@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder="static", template_folder="templates")
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")  # your actual key in .env file
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
-MODEL = "anthropic/claude-sonnet-4"
+MODEL = "meta-llama/llama-3.3-70b-instruct:free"
 
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
